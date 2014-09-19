@@ -1,0 +1,8 @@
+#=============================================================================================
+# Example of resolvating a GROMACS structure with the sanme number of water moleculesi
+# as a template file.
+# 
+# Written by Vincent Voelz <vvoelz@stanford.esu> 2008-04-21
+#=============================================================================================
+
+Try: >>  ./resolvate_from_template.py

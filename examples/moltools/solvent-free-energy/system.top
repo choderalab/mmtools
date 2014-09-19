@@ -1,0 +1,17 @@
+
+; amber forcefield
+#include "ffamber03.itp"
+
+; my molecule
+#include "phenol.itp"
+
+; TIP3P water
+#include "ffamber_tip3p.itp"
+
+[ system ]
+phenol in water
+
+[ molecules ]
+; Compound        nmols
+phenol            1
+SOL              1113

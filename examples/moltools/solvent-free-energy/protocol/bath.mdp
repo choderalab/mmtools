@@ -1,0 +1,27 @@
+; GENERATE VELOCITIES FOR STARTUP RUN = 
+gen_vel                  = yes
+gen_temp                 = 300.0
+gen_seed                 = 14538
+
+; OPTIONS FOR WEAK COUPLING ALGORITHMS = 
+
+; Temperature coupling   = 
+Tcoupl                   = AndersenII
+; Groups to couple separately = 
+tc-grps                  = System
+; Time constant (ps) and reference temperature (K) = 
+tau_t                    = 5.0
+ref_t                    = 300.0
+
+; Pressure coupling      = 
+Pcoupl                   = Parrinello-Rahman
+Pcoupltype               = isotropic
+; Time constant (ps), compressibility (1/bar) and reference P (bar) = 
+tau_p                    = 1.67
+compressibility          = 4.5e-5
+ref_p                    = 1.01325
+
+; LANGEVIN DYNAMICS OPTIONS = 
+; Temperature, friction coefficient (amu/ps) and random seed = 
+bd-temp                  = 300
+bd-fric                  = 0

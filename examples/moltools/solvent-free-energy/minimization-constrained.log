@@ -1,0 +1,423 @@
+Log file opened: nodeid 0, nnodes = 1, host = John-Choderas-Laptop.local, process = 2562
+                         :-)  G  R  O  M  A  C  S  (-:
+
+               Giant Rising Ordinary Mutants for A Clerical Setup
+
+                            :-)  VERSION 3.1.4  (-:
+
+
+       Copyright (c) 1991-2002, University of Groningen, The Netherlands
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                      :-)  mdrun_d (double precision)  (-:
+
+
+++++++++ PLEASE CITE THE FOLLOWING REFERENCE ++++++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++++++ PLEASE CITE THE FOLLOWING REFERENCE ++++++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+There are 0 atoms for free energy perturbation
+Input Parameters:
+   integrator           = steep
+   nsteps               = 1000
+   ns_type              = Grid
+   nstlist              = 10
+   ndelta               = 2
+   bDomDecomp           = FALSE
+   decomp_dir           = 0
+   nstcomm              = 1
+   nstlog               = 50
+   nstxout              = 0
+   nstvout              = 0
+   nstfout              = 0
+   nstenergy            = 50
+   nstxtcout            = 5000
+   init_t               = 0
+   delta_t              = 0.002
+   xtcprec              = 10000
+   nkx                  = 36
+   nky                  = 35
+   nkz                  = 30
+   pme_order            = 6
+   ewald_rtol           = 1e-06
+   ewald_geometry       = 0
+   epsilon_surface      = 0
+   optimize_fft         = FALSE
+   ePBC                 = xyz
+   bUncStart            = FALSE
+   bShakeSOR            = FALSE
+   etc                  = No
+   epc                  = No
+   epctype              = Isotropic
+   tau_p                = 1.67
+   ref_p (3x3):
+      ref_p[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref_p[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref_p[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   compress (3x3):
+      compress[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compress[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compress[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   bSimAnn              = FALSE
+   zero_temp_time       = 0
+   rlist                = 0.9
+   coulombtype          = PME
+   rcoulomb_switch      = 0
+   rcoulomb             = 0.75
+   vdwtype              = Switch
+   rvdw_switch          = 0.7
+   rvdw                 = 0.75
+   epsilon_r            = 1
+   DispCorr             = AllEnerPres
+   fudgeQQ              = 0.8333
+   free-energy          = no
+   init_lambda          = 1
+   nlam                 = 0
+   sc_alpha             = 0
+   sc_sigma             = 0.3
+   delta_lambda         = 0
+   nfep_lambdas         = 0
+   fep-lambda           = 
+   coul-lambda          = 
+   vdw-lambda           = 
+   bonded-lambda        = 
+   restraint-lambda     = 
+   temperature-lambda   = 
+   sum-weights          = 
+   lambda-mc            = no
+   move-mc              = metropolis
+   mc-nequil            = 0
+   mc-nratio            = 0
+   mc-nstart            = 0
+   mc-fastmbar          = 0
+   mc-gibbsdelta        = 0
+   mc-wldelta           = 0
+   mc-wlscale           = 0
+   accum_p1             = 
+   accum_m1             = 
+   disre_weighting      = Conservative
+   disre_mixed          = FALSE
+   dr_fc                = 1000
+   dr_tau               = 0
+   nstdisreout          = 100
+   orires_fc            = 0
+   orires_tau           = 0
+   nstorireout          = 100
+   dihre-fc             = 1000
+   dihre-tau            = 0
+   nstdihreout          = 100
+   em_stepsize          = 0.0001
+   em_tol               = 10
+   niter                = 20
+   fc_stepsize          = 0
+   nstcgsteep           = 1000
+   ConstAlg             = Shake
+   shake_tol            = 1e-12
+   lincs_order          = 4
+   lincs_warnangle      = 180
+   bd_temp              = 300
+   bd_fric              = 0
+   ld_seed              = 1993
+   cos_accel            = 0
+   userint1             = 0
+   userint2             = 0
+   userint3             = 0
+   userint4             = 0
+   userreal1            = 0
+   userreal2            = 0
+   userreal3            = 0
+   userreal4            = 0
+grpopts:
+   nrdf:	        6798
+   ref_t:	           0
+   tau_t:	           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp_excl[  0]: 0
+   efield-x:
+      n = 0
+   efield-xt:
+      n = 0
+   efield-y:
+      n = 0
+   efield-yt:
+      n = 0
+   efield-z:
+      n = 0
+   efield-zt:
+      n = 0
+CPU=  0, lastcg= 1159, targetcg=  580, myshift=    0
+nsb->shift =   1, nsb->bshift=  0
+Neighbor Search Blocks
+nsb->nodeid:         0
+nsb->nnodes:      1
+nsb->cgtotal:  1160
+nsb->natoms:   3386
+nsb->shift:       1
+nsb->bshift:      0
+Nodeid   index  homenr  cgload  workload
+     0       0    3386    1160      1160
+
+Max number of graph edges per atom is 11
+Table routines are used for coulomb: TRUE
+Table routines are used for vdw:     TRUE
+Using a Gaussian width (1/beta) of 0.216831 nm for Ewald
+Using shifted Lennard-Jones, switch between 0.7 and 0.75 nm
+Cut-off's:   NS: 0.9   Coulomb: 0.75   LJ: 0.75
+Average C6 parameter is:  0.0002854663515
+Average C6 parameter is:  0.0002690078244
+Average C12 parameter is:  2.824416229e-07,3386
+Average C12 parameter is:  2.631072375e-07,3386
+Generated table with 2000 data points for COUL.
+Tabscale = 2000 points/nm
+Generated table with 2000 data points for LJ6Switch.
+Tabscale = 2000 points/nm
+Generated table with 2000 data points for LJ12Switch.
+Tabscale = 2000 points/nm
+Generated table with 3000 data points for Ewald.
+Tabscale = 2000 points/nm
+Generated table with 3000 data points for LJ6Switch.
+Tabscale = 2000 points/nm
+Generated table with 3000 data points for LJ12Switch.
+Tabscale = 2000 points/nm
+Going to determine what solvent types we have.
+There are 1114 molecules, 1160 charge groups and 3386 atoms
+There are 0 optimized solvent molecules on node 0
+There are 1113 optimized water molecules on node 0
+Will do PME sum in reciprocal space.
+
+++++++++ PLEASE CITE THE FOLLOWING REFERENCE ++++++++
+U. Essman, L. Perela, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+{A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using the FFTW library (Fastest Fourier Transform in the West)
+Using the FFTW library (Fastest Fourier Transform in the West)
+Initiating Steepest Descents
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest, initial mass: 20466
+Started Steepest Descents on node 0 Fri Jan 25 20:29:32 2008
+Removing pbc first time
+Done rmpbc
+
+++++++++ PLEASE CITE THE FOLLOWING REFERENCE ++++++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+
+++++++++ PLEASE CITE THE FOLLOWING REFERENCE ++++++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+
+Initializing LINear Constraint Solver
+  number of constraints is 18
+  average number of constraints coupled to one constraint is 0.7
+
+Steepest Descents:
+   Tolerance         =  1.00000e+01
+   Number of steps   =         1000
+Going to use C-settle (1113 waters)
+wo = 0.888099, wh =0.0559503, wohh = 18.016, rc = 0.075695, ra = 0.00655606
+rb = 0.0520322, rc2 = 0.15139, rone = 1, dHH = 0.15139, dOH = 0.09572
+Grid: 7 x 7 x 6 cells
+           Step           Time         Lambda      Annealing
+              0        0.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.26971e+01    1.15472e+02    1.03838e+02    7.58414e+01   -1.57809e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.77013e+03    0.00000e+00   -3.13002e+04   -1.02168e+04   -3.80172e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              1        1.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.26581e+01    1.15273e+02    1.03830e+02    7.58362e+01   -1.57811e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.76833e+03    0.00000e+00   -3.12979e+04   -1.02173e+04   -3.80173e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              2        2.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.26288e+01    1.15055e+02    1.03821e+02    7.58309e+01   -1.57813e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.76617e+03    0.00000e+00   -3.12950e+04   -1.02178e+04   -3.80174e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              3        3.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.26128e+01    1.14818e+02    1.03810e+02    7.58258e+01   -1.57815e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.76358e+03    0.00000e+00   -3.12916e+04   -1.02184e+04   -3.80175e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              4        4.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.26127e+01    1.14566e+02    1.03797e+02    7.58212e+01   -1.57819e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.76047e+03    0.00000e+00   -3.12874e+04   -1.02192e+04   -3.80176e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              5        5.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+              6        6.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+              7        7.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+              8        8.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+              9        9.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             10       10.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             11       11.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             12       12.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             13       13.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             14       14.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             15       15.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             16       16.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             17       17.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             18       18.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             19       19.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             20       20.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             21       21.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             22       22.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             23       23.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             24       24.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             25       25.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             26       26.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             27       27.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             28       28.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             29       29.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             30       30.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             31       31.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             32       32.00000        0.00000        0.00000
+
+
+Stepsize too small (7.72476e-13 nm)Converged to machine precision,
+but not to the requested precision (10)
+You might need to increase your constraint accuracy, or turn
+off constraints alltogether (set constraints = none in mdp file)
+
+Steepest Descents did not converge in 33 steps
+  Potential Energy  = -3.80176e+04
+Maximum force:  1.42109e+03
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+   RF=Reaction-field  Free=Free Energy  SC=Softcore
+   T=Tabulated        S=Solvent         W=Water     WW=Water-Water
+
+           Computing:      M-Number      M-Flop's  % Flop's
+         LJ + Coulomb      0.003135      0.119130     0.0
+           Coulomb(T)      0.213638      8.759158     0.6
+      LJ(T) + Coul(T)      0.127246      8.525482     0.6
+   LJ(T) + Coul(T)(W)      0.018084      2.694516     0.2
+  LJ(T) + Coul(T)(WW)      1.801486    695.373596    45.6
+      Innerloop-Iatom      0.906153      9.061530     0.6
+     Spread Q Bspline     24.135408     48.270816     3.2
+     Gather F Bspline     24.135408    289.624896    19.0
+               3D-FFT     37.936140    303.489120    19.9
+            Solve PME      0.623700     39.916800     2.6
+             NS-Pairs      5.302250    111.347250     7.3
+         Reset In Box      0.111738      1.005642     0.1
+              Shift-X      0.223476      1.340856     0.1
+               CG-CoM      0.038280      1.110120     0.1
+                Bonds      0.001056      0.045408     0.0
+               Angles      0.002640      0.430320     0.0
+         RB-Dihedrals      0.004026      0.994422     0.1
+               Update      0.000891      0.027621     0.0
+              Shake-V      0.002843      0.042645     0.0
+            Shake-Vir      0.001188      0.021384     0.0
+        PShake-InitLD      0.073458      4.334022     0.3
+          Total                  1526.53473   100.0
+
+               NODE (s)   Real (s)      (%)
+       Time:      2.000      2.000    100.0
+Finished mdrun on node 0 Fri Jan 25 20:29:34 2008

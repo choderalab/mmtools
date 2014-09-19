@@ -1,0 +1,18 @@
+; OPTIONS FOR BONDS     = 
+constraints              = hbonds ; constrain bonds to hydrogen
+; Type of constraint algorithm = 
+constraint-algorithm     = shake
+; Do not constrain the start configuration = 
+unconstrained-start      = no
+; Use successive overrelaxation to reduce the number of shake iterations = 
+Shake-SOR                = no
+; Relative tolerance of shake = 
+shake-tol                = 1e-12
+; Highest order in the expansion of the constraint coupling matrix = 
+lincs-order              = 4
+; Lincs will write a warning to the stderr if in one step a bond = 
+; rotates over more degrees than = 
+lincs-warnangle          = 180
+; Convert harmonic bonds to morse potentials = 
+morse                    = no
+

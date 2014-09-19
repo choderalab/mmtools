@@ -1,0 +1,15 @@
+This is an example of setting up a system for alchemical free energy calculation in gromacs via AMBER LEaP.
+
+USAGE
+
+PROCEDURE
+
+* convert gromacs residue naming convention to AMBER and delete atoms not recognized by AMBER
+* read ligand from .sdf or .mol2
+* parameterize ligand for GAFF and AM1-BCC, producing .mol2 and frcmod files
+* determine total charge on protein and ligand
+* set up protein in LEaP, add ligand, add counterions, export to AMBER prmtop/crd
+* convert AMBER to gromacs g96/top
+* set ligand and any necessary counterions for neutralization to be annihilated in gromacs top
+* setup solvent and complex simulations
+

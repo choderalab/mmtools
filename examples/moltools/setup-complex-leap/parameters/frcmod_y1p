@@ -1,0 +1,17 @@
+# Parameters for TYR-PO2(OH) : Y1P; N.Homeyer, A.H.C.Horn, H.Lanig, H.Sticht, J. Mol. Model., in press 
+BOND
+OS - P   525.0   1.610
+OH - P   525.0   1.610
+
+ANGLE
+C - OS - P   100.0   120.50
+O2 - P - OH  140.0   108.23
+HO - OH - P  140.0   108.50
+CA - C - OS   70.0   120.00
+ 
+DIHE
+
+IMPR
+CA-CA-C-OS    1.1     180.0      2.0
+
+

@@ -1,0 +1,1 @@
+python ../../pipelinetools/shoveit.py -p 1YRI.pdb -s 1YRI_wtv.seq -i NaCl -c 0.015 -a 4.8 -b small -f ffamber99 -o out_1YRI_wtv

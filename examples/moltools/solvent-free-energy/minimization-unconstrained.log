@@ -1,0 +1,976 @@
+Log file opened: nodeid 0, nnodes = 1, host = John-Choderas-Laptop.local, process = 2553
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                      GROwing Monsters And Cloning Shrimps
+
+                            :-)  VERSION 3.1.4  (-:
+
+
+       Copyright (c) 1991-2002, University of Groningen, The Netherlands
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                      :-)  mdrun_d (double precision)  (-:
+
+
+++++++++ PLEASE CITE THE FOLLOWING REFERENCE ++++++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++++++ PLEASE CITE THE FOLLOWING REFERENCE ++++++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+There are 0 atoms for free energy perturbation
+Input Parameters:
+   integrator           = steep
+   nsteps               = 1000
+   ns_type              = Grid
+   nstlist              = 10
+   ndelta               = 2
+   bDomDecomp           = FALSE
+   decomp_dir           = 0
+   nstcomm              = 1
+   nstlog               = 50
+   nstxout              = 0
+   nstvout              = 0
+   nstfout              = 0
+   nstenergy            = 50
+   nstxtcout            = 5000
+   init_t               = 0
+   delta_t              = 0.002
+   xtcprec              = 10000
+   nkx                  = 36
+   nky                  = 35
+   nkz                  = 30
+   pme_order            = 6
+   ewald_rtol           = 1e-06
+   ewald_geometry       = 0
+   epsilon_surface      = 0
+   optimize_fft         = FALSE
+   ePBC                 = xyz
+   bUncStart            = FALSE
+   bShakeSOR            = FALSE
+   etc                  = No
+   epc                  = No
+   epctype              = Isotropic
+   tau_p                = 1.67
+   ref_p (3x3):
+      ref_p[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref_p[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref_p[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   compress (3x3):
+      compress[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compress[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compress[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   bSimAnn              = FALSE
+   zero_temp_time       = 0
+   rlist                = 0.9
+   coulombtype          = PME
+   rcoulomb_switch      = 0
+   rcoulomb             = 0.75
+   vdwtype              = Switch
+   rvdw_switch          = 0.7
+   rvdw                 = 0.75
+   epsilon_r            = 1
+   DispCorr             = AllEnerPres
+   fudgeQQ              = 0.8333
+   free-energy          = no
+   init_lambda          = 1
+   nlam                 = 0
+   sc_alpha             = 0
+   sc_sigma             = 0.3
+   delta_lambda         = 0
+   nfep_lambdas         = 0
+   fep-lambda           = 
+   coul-lambda          = 
+   vdw-lambda           = 
+   bonded-lambda        = 
+   restraint-lambda     = 
+   temperature-lambda   = 
+   sum-weights          = 
+   lambda-mc            = no
+   move-mc              = metropolis
+   mc-nequil            = 0
+   mc-nratio            = 0
+   mc-nstart            = 0
+   mc-fastmbar          = 0
+   mc-gibbsdelta        = 0
+   mc-wldelta           = 0
+   mc-wlscale           = 0
+   accum_p1             = 
+   accum_m1             = 
+   disre_weighting      = Conservative
+   disre_mixed          = FALSE
+   dr_fc                = 1000
+   dr_tau               = 0
+   nstdisreout          = 100
+   orires_fc            = 0
+   orires_tau           = 0
+   nstorireout          = 100
+   dihre-fc             = 1000
+   dihre-tau            = 0
+   nstdihreout          = 100
+   em_stepsize          = 0.0001
+   em_tol               = 10
+   niter                = 20
+   fc_stepsize          = 0
+   nstcgsteep           = 1000
+   ConstAlg             = Shake
+   shake_tol            = 1e-12
+   lincs_order          = 4
+   lincs_warnangle      = 180
+   bd_temp              = 300
+   bd_fric              = 0
+   ld_seed              = 1993
+   cos_accel            = 0
+   userint1             = 0
+   userint2             = 0
+   userint3             = 0
+   userint4             = 0
+   userreal1            = 0
+   userreal2            = 0
+   userreal3            = 0
+   userreal4            = 0
+grpopts:
+   nrdf:	        6816
+   ref_t:	           0
+   tau_t:	           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp_excl[  0]: 0
+   efield-x:
+      n = 0
+   efield-xt:
+      n = 0
+   efield-y:
+      n = 0
+   efield-yt:
+      n = 0
+   efield-z:
+      n = 0
+   efield-zt:
+      n = 0
+CPU=  0, lastcg= 1159, targetcg=  580, myshift=    0
+nsb->shift =   1, nsb->bshift=  0
+Neighbor Search Blocks
+nsb->nodeid:         0
+nsb->nnodes:      1
+nsb->cgtotal:  1160
+nsb->natoms:   3386
+nsb->shift:       1
+nsb->bshift:      0
+Nodeid   index  homenr  cgload  workload
+     0       0    3386    1160      1160
+
+Max number of graph edges per atom is 11
+Table routines are used for coulomb: TRUE
+Table routines are used for vdw:     TRUE
+Using a Gaussian width (1/beta) of 0.216831 nm for Ewald
+Using shifted Lennard-Jones, switch between 0.7 and 0.75 nm
+Cut-off's:   NS: 0.9   Coulomb: 0.75   LJ: 0.75
+Average C6 parameter is:  0.0002854663515
+Average C6 parameter is:  0.0002690078244
+Average C12 parameter is:  2.824416229e-07,3386
+Average C12 parameter is:  2.631072375e-07,3386
+Generated table with 2000 data points for COUL.
+Tabscale = 2000 points/nm
+Generated table with 2000 data points for LJ6Switch.
+Tabscale = 2000 points/nm
+Generated table with 2000 data points for LJ12Switch.
+Tabscale = 2000 points/nm
+Generated table with 3000 data points for Ewald.
+Tabscale = 2000 points/nm
+Generated table with 3000 data points for LJ6Switch.
+Tabscale = 2000 points/nm
+Generated table with 3000 data points for LJ12Switch.
+Tabscale = 2000 points/nm
+Going to determine what solvent types we have.
+There are 1114 molecules, 1160 charge groups and 3386 atoms
+There are 0 optimized solvent molecules on node 0
+There are 1113 optimized water molecules on node 0
+Will do PME sum in reciprocal space.
+
+++++++++ PLEASE CITE THE FOLLOWING REFERENCE ++++++++
+U. Essman, L. Perela, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+{A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using the FFTW library (Fastest Fourier Transform in the West)
+Using the FFTW library (Fastest Fourier Transform in the West)
+Initiating Steepest Descents
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest, initial mass: 20466
+Started Steepest Descents on node 0 Fri Jan 25 20:29:25 2008
+Removing pbc first time
+Done rmpbc
+
+++++++++ PLEASE CITE THE FOLLOWING REFERENCE ++++++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+Steepest Descents:
+   Tolerance         =  1.00000e+01
+   Number of steps   =         1000
+Going to use C-settle (1113 waters)
+wo = 0.888099, wh =0.0559503, wohh = 18.016, rc = 0.075695, ra = 0.00655606
+rb = 0.0520322, rc2 = 0.15139, rone = 1, dHH = 0.15139, dOH = 0.09572
+Grid: 7 x 7 x 6 cells
+           Step           Time         Lambda      Annealing
+              0        0.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.93943e+02    1.74323e+02    1.08092e+02    3.42026e+01   -1.50015e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.15306e+04    0.00000e+00   -3.02767e+04   -9.15398e+03   -1.87897e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              1        1.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.92901e+02    1.74129e+02    1.08087e+02    3.42346e+01   -1.50017e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.14676e+04    0.00000e+00   -3.02785e+04   -9.15456e+03   -1.88563e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              2        2.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.91652e+02    1.73896e+02    1.08080e+02    3.42733e+01   -1.50021e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.13924e+04    0.00000e+00   -3.02807e+04   -9.15525e+03   -1.89359e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              3        3.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.90153e+02    1.73617e+02    1.08072e+02    3.43202e+01   -1.50025e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.13026e+04    0.00000e+00   -3.02833e+04   -9.15610e+03   -1.90309e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              4        4.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.88355e+02    1.73281e+02    1.08062e+02    3.43770e+01   -1.50030e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.11954e+04    0.00000e+00   -3.02865e+04   -9.15711e+03   -1.91444e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              5        5.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.86199e+02    1.72877e+02    1.08050e+02    3.44460e+01   -1.50036e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.10677e+04    0.00000e+00   -3.02903e+04   -9.15833e+03   -1.92797e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              6        6.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.83615e+02    1.72392e+02    1.08035e+02    3.45301e+01   -1.50043e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.09158e+04    0.00000e+00   -3.02949e+04   -9.15981e+03   -1.94408e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              7        7.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.80517e+02    1.71810e+02    1.08018e+02    3.46329e+01   -1.50052e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.07352e+04    0.00000e+00   -3.03004e+04   -9.16161e+03   -1.96323e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              8        8.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.76809e+02    1.71111e+02    1.07996e+02    3.47588e+01   -1.50063e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.05212e+04    0.00000e+00   -3.03071e+04   -9.16378e+03   -1.98596e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+              9        9.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.72373e+02    1.70271e+02    1.07971e+02    3.49137e+01   -1.50076e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    2.02680e+04    0.00000e+00   -3.03152e+04   -9.16642e+03   -2.01288e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             10       10.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.67075e+02    1.69263e+02    1.07939e+02    3.51053e+01   -1.50093e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.99693e+04    0.00000e+00   -3.03249e+04   -9.16964e+03   -2.04468e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             11       11.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.60761e+02    1.68056e+02    1.07901e+02    3.53435e+01   -1.50113e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.96181e+04    0.00000e+00   -3.03367e+04   -9.17357e+03   -2.08213e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             12       12.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.53263e+02    1.66612e+02    1.07855e+02    3.56414e+01   -1.50139e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.92068e+04    0.00000e+00   -3.03511e+04   -9.17838e+03   -2.12607e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             13       13.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.44399e+02    1.64892e+02    1.07798e+02    3.60169e+01   -1.50171e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.87274e+04    0.00000e+00   -3.03686e+04   -9.18432e+03   -2.17742e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             14       14.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.33993e+02    1.62852e+02    1.07729e+02    3.64938e+01   -1.50211e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.81715e+04    0.00000e+00   -3.03900e+04   -9.19166e+03   -2.23712e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             15       15.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.21896e+02    1.60452e+02    1.07645e+02    3.71051e+01   -1.50263e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.75311e+04    0.00000e+00   -3.04162e+04   -9.20080e+03   -2.30614e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             16       16.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.08027e+02    1.57659e+02    1.07541e+02    3.78958e+01   -1.50330e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.67992e+04    0.00000e+00   -3.04486e+04   -9.21226e+03   -2.38538e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             17       17.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.92425e+02    1.54465e+02    1.07415e+02    3.89280e+01   -1.50417e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.59700e+04    0.00000e+00   -3.04887e+04   -9.22678e+03   -2.47564e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             18       18.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.75291e+02    1.50906e+02    1.07261e+02    4.02848e+01   -1.50532e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.50408e+04    0.00000e+00   -3.05390e+04   -9.24537e+03   -2.57751e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             19       19.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.56958e+02    1.47090e+02    1.07074e+02    4.20720e+01   -1.50687e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.40126e+04    0.00000e+00   -3.06027e+04   -9.26955e+03   -2.69133e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             20       20.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.38633e+02    1.43447e+02    1.06856e+02    4.42713e+01   -1.50887e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.29499e+04    0.00000e+00   -3.06804e+04   -9.29980e+03   -2.81060e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             21       21.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.20080e+02    1.40302e+02    1.06600e+02    4.68871e+01   -1.51146e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.18693e+04    0.00000e+00   -3.07762e+04   -9.33809e+03   -2.93426e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             22       22.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00468e+02    1.38029e+02    1.06294e+02    4.99005e+01   -1.51488e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    1.07773e+04    0.00000e+00   -3.08971e+04   -9.38768e+03   -3.06278e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             23       23.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.00047e+01    1.36900e+02    1.05931e+02    5.32353e+01   -1.51943e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    9.70604e+03    0.00000e+00   -3.10498e+04   -9.45182e+03   -3.19389e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             24       24.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    6.00137e+01    1.36495e+02    1.05500e+02    5.71808e+01   -1.52573e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    8.66054e+03    0.00000e+00   -3.12433e+04   -9.53595e+03   -3.32852e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             25       25.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    4.39171e+01    1.35673e+02    1.05019e+02    6.15756e+01   -1.53383e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    7.73392e+03    0.00000e+00   -3.14592e+04   -9.63664e+03   -3.45495e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             26       26.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.27164e+01    1.33211e+02    1.04573e+02    6.53697e+01   -1.54316e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    6.94601e+03    0.00000e+00   -3.16645e+04   -9.74865e+03   -3.56745e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             27       27.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.65931e+01    1.30529e+02    1.04135e+02    6.96843e+01   -1.55330e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    6.26185e+03    0.00000e+00   -3.18183e+04   -9.87003e+03   -3.66488e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             28       28.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    4.10034e+02    1.62750e+02    1.04730e+02    6.88595e+01   -1.56144e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.73415e+03    0.00000e+00   -3.18565e+04   -9.98107e+03   -3.69184e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             29       29.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.34564e+01    1.26652e+02    1.03989e+02    7.02406e+01   -1.56237e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.69250e+03    0.00000e+00   -3.18555e+04   -9.99145e+03   -3.73425e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             30       30.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             31       31.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    4.55264e+01    1.22685e+02    1.03919e+02    7.20569e+01   -1.56371e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.65088e+03    0.00000e+00   -3.18513e+04   -1.00008e+04   -3.74208e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             32       32.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.24419e+02    1.26885e+02    1.03879e+02    7.19620e+01   -1.56441e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.57512e+03    0.00000e+00   -3.18424e+04   -1.00205e+04   -3.74250e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             33       33.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.64277e+01    1.21288e+02    1.03848e+02    7.31123e+01   -1.56572e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.53716e+03    0.00000e+00   -3.18342e+04   -1.00285e+04   -3.75166e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             34       34.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             35       35.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.87299e+01    1.23278e+02    1.03833e+02    7.25602e+01   -1.56591e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.50258e+03    0.00000e+00   -3.18276e+04   -1.00378e+04   -3.76003e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             36       36.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.03667e+02    1.20058e+02    1.03783e+02    7.37818e+01   -1.56775e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.42222e+03    0.00000e+00   -3.18042e+04   -1.00567e+04   -3.76051e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             37       37.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    5.93582e+01    1.23161e+02    1.03780e+02    7.29458e+01   -1.56783e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.38396e+03    0.00000e+00   -3.17929e+04   -1.00672e+04   -3.76847e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             38       38.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             39       39.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.36981e+01    1.20198e+02    1.03747e+02    7.36397e+01   -1.56864e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.35628e+03    0.00000e+00   -3.17816e+04   -1.00734e+04   -3.77461e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             40       40.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             41       41.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.53872e+01    1.21180e+02    1.03736e+02    7.34834e+01   -1.56917e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.31273e+03    0.00000e+00   -3.17641e+04   -1.00846e+04   -3.77814e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             42       42.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.79637e+01    1.19175e+02    1.03704e+02    7.41056e+01   -1.57011e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.27217e+03    0.00000e+00   -3.17443e+04   -1.00942e+04   -3.78115e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             43       43.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.84704e+01    1.20802e+02    1.03700e+02    7.38001e+01   -1.57060e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.22609e+03    0.00000e+00   -3.17212e+04   -1.01062e+04   -3.78351e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             44       44.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.81969e+01    1.18117e+02    1.03660e+02    7.45971e+01   -1.57155e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.19092e+03    0.00000e+00   -3.16995e+04   -1.01143e+04   -3.78599e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             45       45.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    6.52999e+01    1.20741e+02    1.03671e+02    7.40588e+01   -1.57190e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.14484e+03    0.00000e+00   -3.16720e+04   -1.01265e+04   -3.78617e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             46       46.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    6.13637e+01    1.17053e+02    1.03618e+02    7.51327e+01   -1.57295e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.11296e+03    0.00000e+00   -3.16477e+04   -1.01335e+04   -3.78840e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             47       47.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             48       48.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.73440e+01    1.18353e+02    1.03627e+02    7.46405e+01   -1.57302e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.09039e+03    0.00000e+00   -3.16327e+04   -1.01396e+04   -3.79409e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             49       49.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             50       50.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.42167e+01    1.16773e+02    1.03593e+02    7.51991e+01   -1.57400e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.04341e+03    0.00000e+00   -3.15948e+04   -1.01508e+04   -3.79565e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             51       51.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.32491e+01    1.17832e+02    1.03599e+02    7.49365e+01   -1.57432e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    5.01084e+03    0.00000e+00   -3.15683e+04   -1.01592e+04   -3.79714e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             52       52.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.07681e+01    1.15867e+02    1.03559e+02    7.56020e+01   -1.57519e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.97477e+03    0.00000e+00   -3.15342e+04   -1.01676e+04   -3.79765e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             53       53.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.64026e+01    1.17560e+02    1.03577e+02    7.51629e+01   -1.57545e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.94025e+03    0.00000e+00   -3.15027e+04   -1.01766e+04   -3.79818e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             54       54.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             55       55.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.37631e+01    1.15966e+02    1.03548e+02    7.55766e+01   -1.57590e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.92461e+03    0.00000e+00   -3.14858e+04   -1.01801e+04   -3.80084e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             56       56.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.89640e+01    1.15546e+02    1.03524e+02    7.58476e+01   -1.57742e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.82802e+03    0.00000e+00   -3.13787e+04   -1.02033e+04   -3.80175e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             57       57.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             58       58.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.47105e+01    1.14446e+02    1.03498e+02    7.62027e+01   -1.57790e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.80725e+03    0.00000e+00   -3.13524e+04   -1.02081e+04   -3.80223e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             59       59.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             60       60.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.40386e+01    1.14659e+02    1.03499e+02    7.61526e+01   -1.57822e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.78244e+03    0.00000e+00   -3.13216e+04   -1.02143e+04   -3.80233e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             61       61.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             62       62.00000        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.29300e+01    1.14170e+02    1.03485e+02    7.63206e+01   -1.57854e+03
+        LJ (SR)  Disper. corr.   Coulomb (SR)   Coulomb (LR)      Potential
+    4.76590e+03    0.00000e+00   -3.12996e+04   -1.02182e+04   -3.80236e+04
+    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+
+           Step           Time         Lambda      Annealing
+             63       63.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             64       64.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             65       65.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             66       66.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             67       67.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             68       68.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             69       69.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             70       70.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             71       71.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             72       72.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             73       73.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             74       74.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             75       75.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             76       76.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             77       77.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             78       78.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             79       79.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             80       80.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             81       81.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             82       82.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             83       83.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             84       84.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             85       85.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             86       86.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             87       87.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             88       88.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             89       89.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             90       90.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             91       91.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             92       92.00000        0.00000        0.00000
+
+           Step           Time         Lambda      Annealing
+             93       93.00000        0.00000        0.00000
+
+
+Stepsize too small (5.9593e-13 nm)Converged to machine precision,
+but not to the requested precision (10)
+You might need to increase your constraint accuracy, or turn
+off constraints alltogether (set constraints = none in mdp file)
+
+Steepest Descents did not converge in 94 steps
+  Potential Energy  = -3.80236e+04
+Maximum force:  1.44000e+03
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+   RF=Reaction-field  Free=Free Energy  SC=Softcore
+   T=Tabulated        S=Solvent         W=Water     WW=Water-Water
+
+           Computing:      M-Number      M-Flop's  % Flop's
+         LJ + Coulomb      0.008930      0.339340     0.0
+           Coulomb(T)      0.607096     24.890936     0.6
+      LJ(T) + Coul(T)      0.361097     24.193499     0.6
+   LJ(T) + Coul(T)(W)      0.052658      7.846042     0.2
+  LJ(T) + Coul(T)(WW)      5.128837   1979.731082    45.5
+      Innerloop-Iatom      2.590285     25.902850     0.6
+     Spread Q Bspline     68.749344    137.498688     3.2
+     Gather F Bspline     68.749344    824.992128    19.0
+               3D-FFT    108.060520    864.484160    19.9
+            Solve PME      1.776600    113.702400     2.6
+             NS-Pairs     15.114963    317.414223     7.3
+         Reset In Box      0.318284      2.864556     0.1
+              Shift-X      0.636568      3.819408     0.1
+               CG-CoM      0.109040      3.162160     0.1
+                Bonds      0.004700      0.202100     0.0
+               Angles      0.007520      1.225760     0.0
+         RB-Dihedrals      0.011468      2.832596     0.1
+               Update      0.002538      0.078678     0.0
+        PShake-InitLD      0.209244     12.345396     0.3
+          Total                  4347.52600   100.0
+
+               NODE (s)   Real (s)      (%)
+       Time:      6.000      6.000    100.0
+Finished mdrun on node 0 Fri Jan 25 20:29:31 2008

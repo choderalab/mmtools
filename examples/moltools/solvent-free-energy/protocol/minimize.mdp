@@ -1,0 +1,15 @@
+; RUN CONTROL PARAMETERS = 
+integrator               = steep
+nsteps                   = 1000
+
+; ENERGY MINIMIZATION OPTIONS = 
+; Force tolerance and initial step-size = 
+emtol                    = 10
+emstep                   = 0.01
+; Max number of iterations in relax_shells = 
+niter                    = 20
+; Step size (1/ps^2) for minimization of flexible constraints = 
+fcstep                   = 0
+; Frequency of steepest descents steps when doing CG = 
+nstcgsteep               = 1000
+

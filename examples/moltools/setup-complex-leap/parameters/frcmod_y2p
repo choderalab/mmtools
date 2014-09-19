@@ -1,0 +1,14 @@
+# Parameters for TYR-PO3 : Y2P; N.Homeyer, A.H.C.Horn, H.Lanig, H.Sticht, J. Mol. Model., in press  
+BOND
+P - OS  525.0   1.610
+
+ANGLE
+C - OS - P   100.0   120.50
+CA - C - OS   70.0   120.00
+ 
+DIHE
+
+IMPR
+CA-CA-C-OS    1.1     180.0      2.0
+
+

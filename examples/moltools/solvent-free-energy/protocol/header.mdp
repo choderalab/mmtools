@@ -1,0 +1,4 @@
+; VARIOUS PREPROCESSING OPTIONS = 
+title                    = free-energy-calculation
+cpp                      = /usr/bin/cpp
+define                   = 

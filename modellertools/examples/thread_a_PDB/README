@@ -1,0 +1,23 @@
+DESCRIPTION
+
+In this example, we will thread a new sequence onto the
+Protein G structure.
+
+2GB2_proG.seq        - a sequence file for the wildtype
+2GB2_proG_mutWs.seq  - a sequence file for mutant
+
+WT     MTYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE
+mut    MTYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTWDDATKTWTWTE
+
+Close inspection shows that here we are mutating the hydrophobic
+residues in the C-temrinal regions to tryptophans (a la trp-zip).
+This is a good test of MODELLER's ability to re-pack interfaces.
+
+To run the example:
+$ python single_driver.py 2GB2_proG.pdb 2GB2_proG_mutWs.seq
+
+This will output a threaded PDB file "target.pdb"
+
+
+Vincent Voelz
+Jan 25, 2012

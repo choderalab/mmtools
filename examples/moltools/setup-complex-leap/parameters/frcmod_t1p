@@ -1,0 +1,13 @@
+# Parameters for THR-PO2(OH) : T1P; N.Homeyer, A.H.C.Horn, H.Lanig, H.Sticht, J. Mol. Model., in press
+BOND
+P - OH   525.0   1.610
+P - OS   525.0   1.610
+
+ANGLE
+CT - OS - P  100.0   120.50
+O2 - P - OH  140.0   108.23
+HO - OH - P  140.0   108.50
+ 
+DIHE
+
+

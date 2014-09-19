@@ -1,0 +1,7 @@
+phenol: -5.67+/-0.03
+
+total DeltaF = -6.161 +- 0.130 kcal/mol
+
+trimethyl_phosphate: -10.59+/-0.03
+E_oct_2_enal: -2.47+/-0.03
+N_methylacetamide: -8.39+/-0.03

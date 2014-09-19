@@ -1,0 +1,76 @@
+Example of relative binding free energy calculations.
+
+John D. Chodera
+Pande group
+jchodera@gmail.com
+2008-02-10
+
+DESCRIPTION
+
+Example script to set up a relative binding affinity free energy calculation,
+where a specified set of ligands are mutated to a common shared substructure in
+complex and in solvent.
+
+The OpenEye utility 'maximum common substructure search' (MCSS) is used to
+identify the largest subgraph of atoms where both the (1) Antechamber atom types
+and (2) bond types are shared among all ligands.
+
+A pair of free energy calculations are set up for each ligand, in which the
+ligand is truncated to this common substructure in the solvated complex and in
+vacuum.  This allows relative free energies of binding to be computed from the
+appropriate cycles.
+
+Note that this script is currently set up to use Michael Shirts's gromacs_dg
+expanded ensemble code for free energy calculations, but it could be modified as
+needed to set up separate simulations at different alchemical intermediates.
+
+KNOWN BUGS
+
+For some reason, there are some ring atom types in GAFF that appear to be
+*indentical*, but are named differently.  Because of this, and the way
+antechamber makes these assignments seemingly randomly, this approach may fail
+to identify substructures that are actually identical despite having different
+names for parameters (but identical parameters).
+
+Note that this approach will not work correctly if the groups connected to the
+common substructure are connected via more than one bond.  In order to deal with
+this case, a "soft core bond" approach should be used, in which all harmonic
+bonds but one are turned into a Morse potential, softened, and then turned off.
+Contact the author for more information.
+
+This approach has not been extensively tested.  Use at your own risk.
+
+MANIFEST
+
+pairwise-common-substructures.py - investigate a set of ligands for good pairwise overlap
+extract-common-substructure.py - extract the common substructure from a set of ligands
+setup-relative-fep.py - set up the relative binding free energy calculations
+
+UTILITIES
+
+* pairwise-common-substructures.py
+
+Will examine GAFF-parameterized ligands in ligand_basepath directory and report the
+number of atoms in common between each pair of ligands.
+
+Use the script in examples/moltools/parameterize-ligands/ to parameterize ligands in a
+multi-molecule .mol2 or .sdf file.
+
+* extract-common-substructure.py
+
+Will examine GAFF-parameterized ligands in ligand_basepath directory and produce a 
+.mol2 file with common substructure.
+
+* setup-relative-fep.py
+
+Will set up one or more replicates of free energy calculations from each ligand to this
+common intermediate.  MDP options are controlled in the various 'mdpblock' sections in the
+early part of the code.
+
+CITATIONS
+
+This work has not yet been published.  Contact the author about coauthorship in
+any publications to make use of this code.
+
+
+

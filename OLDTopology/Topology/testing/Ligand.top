@@ -1,0 +1,9 @@
+#include "ffoplsaa.itp"
+#include "LG2.itp"
+
+[ system ]
+p3863_fkbprelative_ligand
+
+[ molecules ]
+; Compound        #mols
+LG2              1

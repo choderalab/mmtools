@@ -1,0 +1,38 @@
+; Free energy control stuff = 
+free-energy              = mutate ; annihilate electrostatics and Lennard-Jones
+nstfep                   = 50 ; 0.1 ps between weight updates (must be integer multiple of nstlist)
+nstdgdl                  = 50 ; 0.1 ps between writing energies
+
+; weight update scheme
+lambda-mc                = gibbs-wang-landau ; Wang-Landau with waste recycling
+mc-wldelta               = 1.0 ; initial delta factor for Wang-Landau
+mc-wlscale               = 0.5 ; amount by which delta is adjusted for Wang-Landau
+mc-nratio                = 0.8 ; flatness criterion
+
+; state transition probability
+move-mc                  = metropolized-gibbs ; Metropolized Gibbs for fastest mixing of states
+
+; starting and stopping
+mc-nstart                = 0 ; number of updates to perform per state for driving through each state
+mc-nequil                = 1000 ; number of updates before freezing weights
+
+init-lambda              = 1 ; initial state
+
+; schedule for switching off lambdas
+; first, restraints are turned on as charges are switched off
+; next, vdw and torsions are switched off
+fep-lambda               = 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.00 0.0 0.00 0.0 0.00 0.0 0.0 ; for global scaling (don't need)
+coul-lambda              = 0.0 0.1 0.2 0.3 0.5 0.7 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.00 1.0 1.00 1.0 1.00 1.0 1.0 ; for scaling electrostatics
+restraint-lambda         = 0.0 0.1 0.2 0.3 0.5 0.7 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.00 1.0 1.00 1.0 1.00 1.0 1.0 ; for scaling restraints
+vdw-lambda               = 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.65 0.7 0.75 0.8 0.85 0.9 1.0 ; for scaling vdw interactions
+bonded-lambda            = 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.65 0.7 0.75 0.8 0.85 0.9 1.0 ; for scaling torsions
+
+;fep-lambda                = 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 ; global scaling
+;coul-lambda               = 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.33 0.66 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 ; scaling electrostatics
+;vdw-lambda                = 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.10 0.20 0.30 0.40 0.50 0.60 0.70 0.75 0.80 0.85 0.90 1.00 ; scaling vdw
+;bonded-lambda             = 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.10 0.30 0.60 0.80 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 ; scaling torsions
+;restraint-lambda          = 0.00 0.05 0.10 0.20 0.40 0.60 0.80 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 ; scaling restraints
+
+sc-alpha                 = 0.5 ; soft-core factor
+
+

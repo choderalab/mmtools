@@ -1,0 +1,6 @@
+# parameters for Mg2+ from Aqvist
+MASS
+MG     24.305
+
+NONB
+MG          0.7926  0.8947             Mg2+ Aqvist JPC 1990,94,8021.(adapted)
